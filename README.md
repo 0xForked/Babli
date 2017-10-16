@@ -18,8 +18,6 @@ This repository contains a detailed Babli App that inspired by <a href="https://
 3. **service**: Services for the application.
 4. **utils**: Utility classes.
 
-#### Classes have been designed in such a way that it could be inherited and maximize the code reuse.
-
 ### Library reference resources:
 
 - Calligraphy          : https://github.com/chrisjenx/Calligraphy
