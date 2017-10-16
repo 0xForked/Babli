@@ -4,6 +4,7 @@ import android.accounts.AccountManager;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -31,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.txt_auth_login_cpregister) TextView registerCaption;
     @BindView(R.id.txt_auth_login_cgpassword) TextView passwordChange;
     @BindView(R.id.et_auth_login_email) EditText emailLogin;
-
 
     private static final int REQUEST_CODE_EMAIL = 1;
 
@@ -89,17 +89,46 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE_EMAIL && resultCode == RESULT_OK) {
-            String accountName = data.getStringExtra(AccountManager.KEY_ACCOUNT_NAME);
-            emailLogin.setText(accountName );
-            Log.d("Email", accountName);
+
+            //get user email
+            final String accountName = data.getStringExtra(AccountManager.KEY_ACCOUNT_NAME);
+            //init allert dialog
+            final AlertDialog.Builder alertDialogBuilder =
+                    new AlertDialog.Builder(LoginActivity.this);
+            final AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.setTitle("Use this email!");
+            alertDialog.setIcon(R.mipmap.ic_launcher);
+
+            TextView email = new TextView(LoginActivity.this);
+            email.setTextSize(25);
+            email.setTypeface(null, Typeface.BOLD);
+            email.setClickable(true);
+            email.setText(accountName);
+            email.setFocusable(true);
+            email.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    emailLogin.setText(accountName);
+                    alertDialog.dismiss();
+                }
+            });
+            // set view email
+            alertDialog.setView(email, 90, 90, 90, 90);
+            // show alert
+            alertDialog.show();
+
+
         }
     }
 
+
+    //function change user password
     void changePassword() {
         final AlertDialog.Builder alertDialogBuilder =
                 new AlertDialog.Builder(LoginActivity.this);
         alertDialogBuilder.setTitle("Enter your registered email address!");
         alertDialogBuilder.setIcon(R.mipmap.ic_launcher);
+        //Alert dialog will not Cancelable
         alertDialogBuilder.setCancelable(false);
         //Showing EditText in alertDialog
         final EditText inPwd = new EditText(LoginActivity.this);
@@ -126,5 +155,6 @@ public class LoginActivity extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         // show alert
         alertDialog.show();
-     }
+    }
+
 }
