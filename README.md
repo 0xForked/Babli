@@ -3,9 +3,18 @@
 This repository contains a detailed Babli App that implements <a href="https://github.com/aasumitro/android-mvp-architecture">MVP architecture</a> with <a href="https://github.com/aasumitro/babli-service/">babli-services</a> as a web service.
 
 <p align="center">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-login.png" width="250">
-  <img src="https://janishar.github.io/images/mvp-app-pics/main-view.png" width="250">
-  <img src="https://janishar.github.io/gifs/mvp-app.gif" width="250">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/1-Login.png" width="250">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/2-current-email.png" width="250">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/3-forgot.png" width="250">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/4-Register.png" width="250">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/5-verification.png" width="250">
+</p>
+<br>
+
+<p align="center">
+ 
+  
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/3-forgot.png" width="250">
 </p>
 <br>
 
@@ -27,3 +36,4 @@ This repository contains a detailed Babli App that implements <a href="https://g
 - Drawable Gif         : https://github.com/koral--/android-gif-drawable
 - Image Slider         : https://github.com/daimajia/AndroidImageSlider
 - Country Code Picker  : https://github.com/hbb20/CountryCodePickerProject
+- Code input           : https://github.com/glomadrian/material-code-input
