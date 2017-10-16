@@ -77,6 +77,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name_user">Full Name</string>
     <string name="phone">Phone</string>
+    <string name="done">done</string>
 
 
 </resources>

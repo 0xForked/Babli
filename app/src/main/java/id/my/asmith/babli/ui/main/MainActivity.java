@@ -24,8 +24,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import id.my.asmith.babli.R;
 import id.my.asmith.babli.ui.auth.LoginActivity;
+import id.my.asmith.babli.ui.auth.PhoneConfirmation;
 import id.my.asmith.babli.ui.auth.RegisterActivity;
-import id.my.asmith.babli.ui.splash.SplashActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         lay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Buka Profile", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Open Profile", Toast.LENGTH_LONG).show();
             }
         });
         //Set text in drawer header
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main_cart, menu);
         return true;
     }
 
@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_cart) {
+            startActivity(new Intent(MainActivity.this, PhoneConfirmation.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -150,10 +151,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void displaySelectedScreen(int itemId) {
-
         //creating fragment object
         Fragment fragment = null;
-
         //initializing the fragment object which is selected
         switch (itemId) {
             case R.id.nav_home:

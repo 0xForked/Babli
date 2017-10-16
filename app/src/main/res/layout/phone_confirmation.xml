@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verfication code"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:fontFamily="monospace"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txt_phone_confirmation_header"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/txt_phone_confirmation_header"
+        android:id="@+id/txt_phone_confirmation_header_mini"
+        android:text="Please type the verification code sent to :"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_phone_confirmation_header_mini"
+        android:id="@+id/txt_phone_confirmation_header_number"
+        android:layout_centerHorizontal="true"
+        android:hint="+6282200000000"/>
+    <com.github.glomadrian.codeinputlib.CodeInput
+        android:layout_below="@+id/txt_phone_confirmation_header_number"
+        android:layout_marginTop="20dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        app:underline_color="#457ad1"
+        app:underline_selected_color="#9e1ace"
+        app:text_color="#b12eff"
+        app:hint_color="#77ce9d"
+        app:hint_text="Pin code"
+        app:codes="4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ci_phone_confirmation_ed"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/ci_phone_confirmation_ed"
+        android:id="@+id/txt_phone_confirmation_footer_caption"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter a wrong number? tap here"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/txt_phone_confirmation_footer_caption"
+        android:id="@+id/txt_phone_confirmation_footer_notreceivesms"
+        android:layout_centerHorizontal="true"
+        android:hint="Didn't receive an sms message? tap here"
+        android:textSize="15sp"/>
+
+</RelativeLayout>
