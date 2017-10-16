@@ -1,6 +1,6 @@
 # Babli App
 
-This repository contains a detailed Babli App that implements <a href="https://github.com/aasumitro/android-mvp-architecture">MVP architecture</a> with <a href="https://github.com/aasumitro/babli-service/">babli-services</a> as a web service.
+This repository contains a detailed Babli App that implements <a href="https://github.com/aasumitro/android-mvp-architecture">MVP architecture</a> with <a href="https://github.com/aasumitro/babli-service/">babli-services</a> as a web service. This app Design is inspired by <a href="https://tokopedia.com/">Tokopedia</a>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/2-current-email.png" width="200">
