@@ -2,6 +2,13 @@
 
 This repository contains a detailed Babli App that implements <a href="https://github.com/aasumitro/android-mvp-architecture">MVP architecture</a> with <a href="https://github.com/aasumitro/babli-service/">babli-services</a> as a web service.
 
+<p align="center">
+  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-login.png" width="250">
+  <img src="https://janishar.github.io/images/mvp-app-pics/main-view.png" width="250">
+  <img src="https://janishar.github.io/gifs/mvp-app.gif" width="250">
+</p>
+<br>
+
 #### The app has following packages:
 1. **data**: It contains all the data accessing and manipulating components.
 2. **ui**: View classes along with their corresponding Presenters.
