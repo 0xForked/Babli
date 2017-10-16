@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.my.asmith.babli.ui.splash.SplashActivity">
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/img_splash"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_name"
+        android:text="@string/app_name_caps"
+        android:layout_below="@+id/img_splash"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:textSize="35sp"
+        android:textColor="@color/black_effective"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_promo"
+        android:layout_below="@id/txt_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/cardview_dark_background"/>
+
+</RelativeLayout>

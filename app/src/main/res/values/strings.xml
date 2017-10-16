@@ -1,0 +1,82 @@
+<resources>
+    <!--apps-->
+    <string name="app_name">Babli</string>
+    <string name="app_name_caps">BABLI</string>
+    <string name="app_promo">Belanja Mudah Belanja Murah</string>
+
+    <!--studio-->
+    <string name="fokipooke_studio">FokiPooke Studio</string>
+    <string name="mail_fokipooke_id">mail@fokipooke.id</string>
+
+    <!--Drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Toolbar menus-->
+    <string name="clear">Clear</string>
+    <string name="cut">Cut</string>
+    <string name="copy">Copy</string>
+    <string name="paste">Paste</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+
+    <!--App Message-->
+    <string name="api_retry_error">Please retry!</string>
+    <string name="api_default_error">Something wrong happened!</string>
+    <string name="some_error">Some Error Occurred!</string>
+    <string name="connection_error">Internet connection lost!</string>
+
+    <string name="error_message_min_pwd">Password length of at least 6 characters</string>
+    <string name="error_message_mAuth_fail">Oops! Please cek your email or password!</string>
+    <string name="error_message_anon_notify">Oops! please login or register!</string>
+
+    <!--Login Register/ user-->
+    <string name="register">Sing up</string>
+    <string name="logout">Logout</string>
+    <string name="login">Sing in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="register_caption">Do not have an account? Sing up</string>
+    <string name="login_caption">Already a member? Sing in</string>
+
+    <!--Login Validation-->
+    <string name="empty_email">Please provide a non empty email.</string>
+    <string name="invalid_email">Please provide a valid email.</string>
+    <string name="empty_password">Please provide a non empty password.</string>
+
+    <!--rating dialog-->
+    <string name="rate_us">Rate Us</string>
+    <string name="rating_message">Please let us know, how can we improve ourselves?</string>
+    <string name="rating_play_store_redirect_message_line_1">Awesome! Thank you for the 5 stars.</string>
+    <string name="rating_play_store_redirect_message_line_2">Please help others, in knowing some good things about this app.</string>
+    <string name="rating_play_store_text">Rate us on Play Store</string>
+    <string name="rating_not_provided_error">Please provide us stars.</string>
+    <string name="rating_thanks">Thank you!</string>
+
+    <!--play store-->
+    <string name="app_google_play_store_link">"https://play.google.com/store/apps/details?id="</string>
+    <string name="app_market_link">"market://details?id="</string>
+
+    <!--empty state-->
+    <string name="empty_screen">We do not have anything\nhere right now.</string>
+    <string name="please_retry">Please Retry</string>
+    <string name="retry">Retry</string>
+
+    <!--action menu-->
+    <string name="communicate">Communicate</string>
+    <string name="setting">Setting</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="home">Home</string>
+    <string name="cart">My Cart</string>
+    <string name="help">Help</string>
+    <string name="contact_us">Contact us</string>
+    <string name="purchase">Purchase</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_user">Full Name</string>
+    <string name="phone">Phone</string>
+
+
+</resources>
