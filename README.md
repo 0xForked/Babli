@@ -1,6 +1,6 @@
 # Babli App
 
-This repository contains a detailed Babli App that inspired by <a href="https://tokopedia.com">Tokopedia</a>
+This repository contains a detailed Babli App that inspired by <a href="https://tokopedia.com">Tokopedia app design</a>
 
 </br>
 <p align="center">
