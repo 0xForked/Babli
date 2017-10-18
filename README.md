@@ -2,6 +2,7 @@
 
 This repository contains a detailed Babli App that inspired by <a href="https://tokopedia.com">Tokopedia</a>
 
+</br>
 <p align="center">
   <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/1-Login.png" width="200">
   <img src="https://github.com/aasumitro/Babli/blob/master/Docs/Images/2-current-email.png?raw=true" width="200">
@@ -9,6 +10,7 @@ This repository contains a detailed Babli App that inspired by <a href="https://
   <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/4-Register.png" width="200">
   <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/5-verification.png" width="200">
 </p>
+</br>
 
 #### The app has following packages:
 1. **data**: It contains all the data accessing and manipulating components.
