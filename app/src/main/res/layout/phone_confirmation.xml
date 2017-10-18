@@ -4,12 +4,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="40dp">
+    android:padding="@dimen/forty">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Verfication code"
+        android:text="@string/verification_code"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:fontFamily="monospace"
@@ -18,10 +18,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/eight"
         android:layout_below="@+id/txt_phone_confirmation_header"
         android:id="@+id/txt_phone_confirmation_header_mini"
-        android:text="Please type the verification code sent to :"
+        android:text="@string/please_type_the_verification_code_sent_to"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="wrap_content"
@@ -29,11 +29,11 @@
         android:layout_below="@+id/txt_phone_confirmation_header_mini"
         android:id="@+id/txt_phone_confirmation_header_number"
         android:layout_centerHorizontal="true"
-        android:hint="+6282200000000"/>
+        android:hint="@string/custom_number"/>
     <com.github.glomadrian.codeinputlib.CodeInput
         android:layout_below="@+id/txt_phone_confirmation_header_number"
-        android:layout_marginTop="20dp"
-        android:layout_width="140dp"
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_width="@dimen/one_hundred_forty"
         android:layout_height="wrap_content"
         app:underline_color="#457ad1"
         app:underline_selected_color="#9e1ace"
@@ -46,20 +46,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/twenty"
         android:layout_below="@+id/ci_phone_confirmation_ed"
         android:id="@+id/txt_phone_confirmation_footer_caption"
         android:layout_centerHorizontal="true"
-        android:hint="Enter a wrong number? tap here"
+        android:hint="@string/wrong_number"
         android:textSize="15sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="@dimen/seven"
         android:layout_below="@+id/txt_phone_confirmation_footer_caption"
         android:id="@+id/txt_phone_confirmation_footer_notreceivesms"
         android:layout_centerHorizontal="true"
-        android:hint="Didn't receive an sms message? tap here"
+        android:hint="@string/didn_t_receive_message"
         android:textSize="15sp"/>
 
 </RelativeLayout>

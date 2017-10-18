@@ -3,6 +3,7 @@ package id.my.asmith.babli.ui.auth;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -29,9 +30,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
-        getSupportActionBar().setTitle("Join with Babli");
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Join with Babli");
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24px);
+        setSupportActionBar(toolbar);
 
         //Login caption
         String captionLogin = "Already a member? <b>Sing in</b>";

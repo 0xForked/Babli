@@ -22,8 +22,10 @@ This repository contains a detailed Babli App that implements <a href="https://g
 - Calligraphy          : https://github.com/chrisjenx/Calligraphy
 - ButterKnife          : http://jakewharton.github.io/butterknife/
 - Retrofit             : https://github.com/square/retrofit
-- Circleimage          : https://github.com/hdodenhof/CircleImageView
+- Circle image         : https://github.com/hdodenhof/CircleImageView
 - Glide                : https://github.com/bumptech/glide
 - Drawable Gif         : https://github.com/koral--/android-gif-drawable
 - Image Slider         : https://github.com/daimajia/AndroidImageSlider
 - Country Code Picker  : https://github.com/hbb20/CountryCodePickerProject
+- Runtime Permission   : https://github.com/00ec454/Ask
+- Material Search Bar  : https://github.com/mancj/MaterialSearchBar

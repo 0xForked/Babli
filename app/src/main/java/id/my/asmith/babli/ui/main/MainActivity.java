@@ -1,5 +1,6 @@
 package id.my.asmith.babli.ui.main;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -7,9 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,25 +19,36 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mancj.materialsearchbar.MaterialSearchBar;
+import com.vistrav.ask.Ask;
+import com.vistrav.ask.annotations.AskDenied;
+import com.vistrav.ask.annotations.AskGranted;
+
 import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import id.my.asmith.babli.R;
 import id.my.asmith.babli.ui.auth.LoginActivity;
-import id.my.asmith.babli.ui.auth.PhoneConfirmation;
 import id.my.asmith.babli.ui.auth.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener {
 
     String names = "Agus Adhi Sumitro";
     String emails = "aasumito@gmail.com";
-    String status = "logout";
+    String status = "login";
 
     //Get view with butterKnife Injection
     @BindView(R.id.drawer_layout) DrawerLayout drawer;
     @BindView(R.id.nav_view) NavigationView navigationView;
+    @BindView(R.id.searchBar) MaterialSearchBar searchBar;
+
+    //OnClick ButterKnife Injection
+    @OnClick(R.id.fab) void myCart (){
+        Toast.makeText(MainActivity.this, "My shopping cart", Toast.LENGTH_LONG).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +56,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         //ButterKnife initialization
         ButterKnife.bind(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //ButterKnife OnClick
+        myCart();
 
-        //Drawer Menu
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
+        //Search Material
+        searchBar.setOnSearchActionListener(this);
+        searchBar.setHint("Search...");
 
         //Navigation Menu
         navigationView.setNavigationItemSelectedListener(this);
@@ -95,6 +105,14 @@ public class MainActivity extends AppCompatActivity
         //Display Home Fragment when the activity is loaded
         displaySelectedScreen(R.id.nav_home);
 
+        Ask.on(this)
+                .forPermissions(Manifest.permission.ACCESS_COARSE_LOCATION
+                        , Manifest.permission.WRITE_EXTERNAL_STORAGE
+                        , Manifest.permission.GET_ACCOUNTS
+                        , Manifest.permission.ACCESS_NETWORK_STATE
+                        , Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .go();
+
     }
 
     @Override
@@ -123,7 +141,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menu_cart) {
-            startActivity(new Intent(MainActivity.this, PhoneConfirmation.class));
+            //startActivity(new Intent(MainActivity.this, PhoneConfirmation.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -178,4 +196,64 @@ public class MainActivity extends AppCompatActivity
         //close the drawer when menu pressed
         drawer.closeDrawer(GravityCompat.START);
     }
+
+    //Search bar
+    @Override
+    public void onSearchStateChanged(boolean enabled) {
+        Fragment fragment = new MainSerachFragment();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.flContent, fragment);
+        ft.commit();
+
+    }
+
+    @Override
+    public void onSearchConfirmed(CharSequence text) {
+        Toast.makeText(MainActivity.this, "Search " + text, Toast.LENGTH_SHORT).show();
+    }
+
+    //Search Bar button clicked
+    @Override
+    public void onButtonClicked(int buttonCode) {
+        switch (buttonCode){
+            case MaterialSearchBar.BUTTON_NAVIGATION:
+                drawer.openDrawer(Gravity.LEFT);
+                break;
+            case MaterialSearchBar.BUTTON_SPEECH:
+                break;
+            case MaterialSearchBar.BUTTON_BACK:
+                searchBar.disableSearch();
+                Fragment fragment = new MainHomeFragment();
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flContent, fragment);
+                ft.commit();
+                break;
+        }
+    }
+
+    //on ask grated & denied
+    //optional
+    @AskGranted(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    public void fileAccessGranted() {
+        Log.i("WRITE_EXTERNAL_STORAGE", "FILE  GRANTED");
+    }
+
+    //optional
+    @AskDenied(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    public void fileAccessDenied() {
+        Log.i("WRITE_EXTERNAL_STORAGE", "FILE  DENiED");
+    }
+
+    //optional
+    @AskGranted(Manifest.permission.GET_ACCOUNTS)
+    public void getAccountsGranted() {
+        Log.i("GET_ACCOUNTS", "MAP GRANTED");
+    }
+
+    //optional
+    @AskDenied(Manifest.permission.GET_ACCOUNTS)
+    public void getAccountsDenied() {
+        Log.i("GET_ACCOUNTS", "MAP DENIED");
+    }
+
 }

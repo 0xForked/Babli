@@ -15,11 +15,11 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_nav_header_pic"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:layout_width="@dimen/sixty_five"
+        android:layout_height="@dimen/sixty_five"
         android:src="@mipmap/ic_launcher"
         app:civ_border_width="2dp"
-        app:civ_border_color="#898989"/>
+        app:civ_border_color="@color/gray"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -27,14 +27,14 @@
 
         android:id="@+id/txt_nav_header_name"
         android:text="@string/fokipooke_studio"
-        android:textColor="#000"
+        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/txt_nav_header_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000"
+        android:textColor="@color/black"
         android:text="@string/mail_fokipooke_id" />
 
 </LinearLayout>

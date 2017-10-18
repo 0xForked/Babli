@@ -5,4 +5,23 @@
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="sliding_search_view_header_height">250dp</dimen>
+    <dimen name="search_view_inset">5dp</dimen>
+    <!-- custom res-->
+    <dimen name="five">5dp</dimen>
+    <dimen name="seven">7dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="fifteen">15dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="twenty_five">25dp</dimen>
+    <dimen name="forty">40dp</dimen>
+    <dimen name="sixty_five">65dp</dimen>
+    <dimen name="one_hundred">100dp</dimen>
+    <dimen name="one_hundred_twenty">120dp</dimen>
+    <dimen name="one_hundred_twenty_five">125dp</dimen>
+    <dimen name="one_hundred_forty">140dp</dimen>
+
+
+
 </resources>
