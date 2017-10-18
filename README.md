@@ -1,21 +1,20 @@
 # Babli App
 
-This repository contains a detailed Babli App that implements <a href="https://github.com/aasumitro/android-mvp-architecture">MVP architecture</a> with <a href="https://github.com/aasumitro/babli-service/">babli-services</a> as a web service.
+This repository contains a detailed Babli App that inspired by <a href="https://tokopedia.com">Tokopedia</a>
 
 <p align="center">
-  <img src="https://janishar.github.io/images/mvp-app-pics/mvp-login.png" width="250">
-  <img src="https://janishar.github.io/images/mvp-app-pics/main-view.png" width="250">
-  <img src="https://janishar.github.io/gifs/mvp-app.gif" width="250">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/1-Login.png" width="200">
+  <img src="https://github.com/aasumitro/Babli/blob/master/Docs/Images/2-current-email.png?raw=true" width="200">
+  <img src="https://github.com/aasumitro/Babli/blob/master/Docs/Images/3-forgot.png?raw=true" width="200">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/4-Register.png" width="200">
+  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/5-verification.png" width="200">
 </p>
-<br>
 
 #### The app has following packages:
 1. **data**: It contains all the data accessing and manipulating components.
 2. **ui**: View classes along with their corresponding Presenters.
 3. **service**: Services for the application.
 4. **utils**: Utility classes.
-
-#### Classes have been designed in such a way that it could be inherited and maximize the code reuse.
 
 ### Library reference resources:
 
