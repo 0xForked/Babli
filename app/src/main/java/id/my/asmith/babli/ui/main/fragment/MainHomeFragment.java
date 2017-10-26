@@ -1,4 +1,4 @@
-package id.my.asmith.babli.ui.main;
+package id.my.asmith.babli.ui.main.fragment;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;

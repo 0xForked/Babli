@@ -19,6 +19,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 import com.vistrav.ask.Ask;
 import com.vistrav.ask.annotations.AskDenied;
@@ -32,12 +34,19 @@ import butterknife.OnClick;
 import id.my.asmith.babli.R;
 import id.my.asmith.babli.ui.auth.LoginActivity;
 import id.my.asmith.babli.ui.auth.RegisterActivity;
+import id.my.asmith.babli.ui.main.fragment.MainHomeFragment;
+import id.my.asmith.babli.ui.main.fragment.MainPurchaseFragment;
+import id.my.asmith.babli.ui.main.fragment.MainSerachFragment;
+import id.my.asmith.babli.ui.main.fragment.MainSettingFragment;
+import id.my.asmith.babli.ui.main.fragment.MainWishlistFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        MaterialSearchBar.OnSearchActionListener {
 
     String names = "Agus Adhi Sumitro";
     String emails = "aasumito@gmail.com";
+    String pics = "https://avatars1.githubusercontent.com/u/8925311?s=460&v=4";
     String status = "login";
 
     //Get view with butterKnife Injection
@@ -99,6 +108,16 @@ public class MainActivity extends AppCompatActivity
             }
         });
         //Set text in drawer header
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+                .placeholder(R.drawable.loading)
+                .error(R.drawable.ic_broken_image);
+
+        Glide.with(this)
+             .load(pics)
+             .apply(options)
+             .into(pic);
+
         name.setText(names);
         email.setText(emails);
 

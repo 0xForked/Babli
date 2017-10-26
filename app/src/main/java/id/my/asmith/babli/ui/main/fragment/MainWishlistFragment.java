@@ -1,4 +1,4 @@
-package id.my.asmith.babli.ui.main;
+package id.my.asmith.babli.ui.main.fragment;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -15,15 +15,14 @@ import id.my.asmith.babli.R;
  * https://asmith.my.id/
  */
 
-public class MainPurchaseFragment extends Fragment {
-
+public class MainWishlistFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         //returning our layout file
         //change R.layout.yourlayoutfilename for each of your fragments
-        return inflater.inflate(R.layout.fragment_main_purchase, container, false);
+        return inflater.inflate(R.layout.fragment_main_wishlist, container, false);
     }
 
 
@@ -31,6 +30,7 @@ public class MainPurchaseFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("Purchase");
+        getActivity().setTitle("My Wishlist");
     }
+
 }

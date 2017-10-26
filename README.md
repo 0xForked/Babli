@@ -2,16 +2,6 @@
 
 This repository contains a detailed Babli App that inspired by <a href="https://tokopedia.com">Tokopedia app design</a>
 
-</br>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/1-Login.png" width="200">
-  <img src="https://github.com/aasumitro/Babli/blob/master/Docs/Images/2-current-email.png?raw=true" width="200">
-  <img src="https://github.com/aasumitro/Babli/blob/master/Docs/Images/3-forgot.png?raw=true" width="200">
-  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/4-Register.png" width="200">
-  <img src="https://raw.githubusercontent.com/aasumitro/Babli/master/Docs/Images/5-verification.png" width="200">
-</p>
-</br>
-
 #### The app has following packages:
 1. **data**: It contains all the data accessing and manipulating components.
 2. **ui**: View classes along with their corresponding Presenters.
