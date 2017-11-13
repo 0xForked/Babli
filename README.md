@@ -19,5 +19,5 @@ This repository contains a detailed Babli App that inspired by <a href="https://
 - Image Slider         : https://github.com/daimajia/AndroidImageSlider
 - Country Code Picker  : https://github.com/hbb20/CountryCodePickerProject
 - Code input           : https://github.com/glomadrian/material-code-input
-- Runtime Permission   : https://github.com/00ec454/Ask
+- Runtime Permissions  : https://github.com/00ec454/Ask
 - Material Search bar  : https://github.com/mancj/MaterialSearchBar
